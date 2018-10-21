@@ -16,4 +16,14 @@ class RpsTest {
     fun rockVsPaper() {
         assertEquals(P2_WINS, rps.play(Rock, Paper))
     }
+
+    @Test
+    fun scissorsVsPaper() {
+        assertEquals(P1_WINS, rps.play(Scissors, Paper))
+    }
+
+    @Test
+    fun scissorsVsRock() {
+        assertEquals(P2_WINS, rps.play(Scissors, Rock))
+    }
 }
