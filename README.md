@@ -1,2 +1,2 @@
 # RpsDemo
-Rock, Paper, Scissors TDD Demo.
+Rock, Paper, Scissors Kata using TDD.
