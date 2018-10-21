@@ -1,6 +1,5 @@
 import Throw.*
-import Winner.P1_WINS
-import Winner.P2_WINS
+import Winner.*
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
@@ -25,5 +24,30 @@ class RpsTest {
     @Test
     fun scissorsVsRock() {
         assertEquals(P2_WINS, rps.play(Scissors, Rock))
+    }
+
+    @Test
+    fun paperVsRock() {
+        assertEquals(P1_WINS, rps.play(Paper, Rock))
+    }
+
+    @Test
+    fun paperVsScissors() {
+        assertEquals(P2_WINS, rps.play(Paper, Scissors))
+    }
+
+    @Test
+    fun rockTie() {
+        assertEquals(TIE, rps.play(Rock, Rock))
+    }
+
+    @Test
+    fun scissorsTie() {
+        assertEquals(TIE, rps.play(Scissors, Scissors))
+    }
+
+    @Test
+    fun paperTie() {
+        assertEquals(TIE, rps.play(Paper, Paper))
     }
 }

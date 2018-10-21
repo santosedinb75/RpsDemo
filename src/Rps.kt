@@ -1,6 +1,5 @@
 import Throw.*
-import Winner.P1_WINS
-import Winner.P2_WINS
+import Winner.*
 
 class Rps {
     fun play(p1: Throw, p2: Throw): Winner {
@@ -18,6 +17,22 @@ class Rps {
 
         if (p1 == Scissors && p2 == Rock) {
             return P2_WINS
+        }
+
+        if (p1 == Paper && p2 == Scissors) {
+            return P2_WINS
+        }
+
+        if (p1 == Rock && p2 == Rock) {
+            return TIE
+        }
+
+        if (p1 == Scissors && p2 == Scissors) {
+            return TIE
+        }
+
+        if (p1 == Paper && p2 == Paper) {
+            return TIE
         }
 
 
